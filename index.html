@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PaperCorrect Robot</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0c0c1e;
+      color: #fff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    video#bgVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.3);
+    }
+
+    .hero, .about, .testimonial, .contact {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .cta {
+      background: #635bff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta:hover {
+      background: #483fc7;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+
+    .about h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #0004;
+      transition: transform 0.3s ease;
+    }
+html {
+  scroll-behavior: smooth;
+}
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial {
+      background: rgba(68, 54, 242, 0.9);
+      color: #fff;
+    }
+
+    .contact {
+      background: rgba(20, 20, 41, 0.9);
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #0b0b1b;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        padding: 15px;
+      }
+
+      .cta {
+        width: 100%;
+      }
+
+      .features {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="https://media.istockphoto.com/id/1892544698/video/aerial-footage-with-electronics-factory-3d-concept-automated-robotic-arm-assembly-line.mp4?s=mp4-640x640-is&k=20&c=jGf8aS5TDgAN06xZlinoUw6a9dlWR786vXgauG_kEUg=" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>PaperCorrect Robot</h1>
+    <h2>AI-Powered Paper-Correcting Robot</h2>
+    <p>Experience the future of paper grading with precision and efficiency using advanced AI technology.</p>
+    <a href="#contact" class="cta">Contact Us</a>
+    <div class="features">
+      <span>★★★★★</span>
+      <span>Efficient Grading</span>
+      <span>Instant Feedback</span>
+    </div>
+    <blockquote>“Incredible accuracy and time-saving features!”<br><strong>- TETRAX AI LABS</strong></blockquote>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Revolutionize Paper Grading</h2>
+    <p>Effortlessly correct papers with precision and speed using cutting-edge AI technology.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Instant Paper Correction</h3>
+        <p>Achieve instant paper correction with our AI-powered robot, saving time and ensuring accuracy in grading.</p>
+      </div>
+      <div class="card">
+        <h3>Efficient Error Detection</h3>
+        <p>Detect errors efficiently through computer vision technology, ensuring thorough evaluation of papers.</p>
+      </div>
+      <div class="card">
+        <h3>Hardware Integration</h3>
+        <p>Our printer-shaped robot accepts physical papers, processes them, and returns results using LLM-based grading.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Feedback System</h3>
+        <p>Utilizes an LLM engine to not only correct but also provide insightful, educational feedback on submitted work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <blockquote>
+      “The PaperCorrect Robot has transformed the way we grade papers, making the process efficient and error-free.”
+      <br><strong>- TETRAX AI LABS</strong>
+    </blockquote>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:hiptlinj13@gmail.com" style="color: #fff;">hiptlinj13@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 77081 06307</p>
+      <p><strong>Address:</strong> Coimbatore, India</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PaperCorrect Robot. All rights reserved.</p>
+  </footer>
+</body>
+</html>
